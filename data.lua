@@ -12,7 +12,7 @@ bbitem.place_result = bbitem.name
 
 local bbrecipe = table.deepcopy(data.raw.recipe["transport-belt"])
 bbrecipe.name = "blood-belt"
-bbrecipe.enabled = true
+bbrecipe.enabled = false
 bbrecipe.ingredients = {{"transport-belt",2}, {"red-wire",1}}
 bbrecipe.result = bbrecipe.name
 
@@ -21,7 +21,7 @@ bbentity.name = "blood-belt"
 bbentity.minable.result = bbentity.name
 
 local spriteinvis = {
-  filename = "__bloodbelt__/graphics/entity/transport-belt/connector/transport-belt-connector-frame-main-mod.png",
+  filename = "__bloodbelt__/graphics/bb-invis.png",
   priority = "low",
   width = 34,
   height = 34,
@@ -58,7 +58,7 @@ bbitem.place_result = bbitem.name
 
 local bbrecipe = table.deepcopy(data.raw.recipe["fast-transport-belt"])
 bbrecipe.name = "blood-belt-fast"
-bbrecipe.enabled = true
+bbrecipe.enabled = false
 bbrecipe.ingredients = {{"fast-transport-belt",1}, {"red-wire",1}}
 bbrecipe.result = bbrecipe.name
 
@@ -96,7 +96,7 @@ bbitem.place_result = bbitem.name
 
 local bbrecipe = table.deepcopy(data.raw.recipe["fast-transport-belt"])
 bbrecipe.name = "blood-belt-express"
-bbrecipe.enabled = true
+bbrecipe.enabled = false
 bbrecipe.ingredients = {{"express-transport-belt",1}, {"red-wire",1}}
 bbrecipe.result = bbrecipe.name
 
@@ -122,3 +122,12 @@ framesprites.frame_shadow_x = spriteinvis
 bbentity.connector_frame_sprites = framesprites
 
 data:extend{bbitem,bbrecipe,bbentity}
+
+local techeffects = data.raw.technology["circuit-network"].effects
+table.insert(techeffects, { type = "unlock-recipe", recipe = "blood-belt" } )
+table.insert(techeffects, { type = "unlock-recipe", recipe = "blood-belt-fast" } )
+table.insert(techeffects, { type = "unlock-recipe", recipe = "blood-belt-express" } )
+
+
+
+
