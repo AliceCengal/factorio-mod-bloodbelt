@@ -1,0 +1,11 @@
+{
+  "name": "bloodbelt",
+  "version": "0.15.0",
+  "factorio_version": "0.15",
+  "dependencies": ["base >= 0.15"],
+  "title": "Blood Belt",
+  "author": "CengalLut",
+  "contact": "cengallut@gmail.com",
+  "homepage": "",
+  "description": "Add circuitautoconnect belts for use in a bloodbus"
+}
