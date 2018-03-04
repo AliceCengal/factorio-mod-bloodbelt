@@ -52,7 +52,11 @@ bloodbelt_config_lut["express-transport-belt"] = {
 
 function bloodbelt_modify_recipe(belt_type)
     local config         = bloodbelt_config_lut[belt_type]
-    local bbrecipe       = table.deepcopy(data.raw.recipe[belt_type])
+    if belt_type == "express-transport-belt" then
+		  bbrecipe = table.deepcopy(data.raw.recipe["fast-transport-belt"])
+	  else
+		  bbrecipe = table.deepcopy(data.raw.recipe[belt_type])
+	  end
 
     bbrecipe.name        = "blood-belt" .. config.name_suffix
     bbrecipe.enabled     = false
