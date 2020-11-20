@@ -94,20 +94,20 @@ function bloodbelt_modify_entity(belt_type)
     framesprites.frame_main_scanner_sw_se = bloodbelt_invisible_sprite
     bbentity.connector_frame_sprites      = framesprites
 
-    local modsprite = "__bloodbelt__/graphics/" ..
-        config.icon_prefix ..
-        "transport-belt/" ..
-        bloodbelt_basename(bbentity.animations.filename):gsub('.png', '-mod.png')
-    local modhrsprite = "__bloodbelt__/graphics/" ..
-        config.icon_prefix ..
-        "transport-belt/" ..
-        bloodbelt_basename(bbentity.animations.filename):gsub('.png', '-mod.png')
+    -- local modsprite = "__bloodbelt__/graphics/" ..
+    --     config.icon_prefix ..
+    --     "transport-belt/" ..
+    --     bloodbelt_basename(bbentity.animations.filename):gsub('.png', '-mod.png')
+    -- local modhrsprite = "__bloodbelt__/graphics/" ..
+    --     config.icon_prefix ..
+    --     "transport-belt/" ..
+    --     bloodbelt_basename(bbentity.animations.filename):gsub('.png', '-mod.png')
 
-    bbentity.animations.filename                 = modsprite
+    --bbentity.animations.filename                 = modsprite
     -- bbentity.animations.hr_version.filename      = modhrsprite
-    bbentity.belt_horizontal.filename            = modsprite
+    --bbentity.belt_horizontal.filename            = modsprite
     -- bbentity.belt_horizontal.hr_version.filename = modhrsprite
-    bbentity.belt_vertical.filename              = modsprite
+    --bbentity.belt_vertical.filename              = modsprite
     -- bbentity.belt_vertical.hr_version.filename   = modhrsprite
 
     local circuitsprites = table.deepcopy(bbentity.circuit_connector_sprites)
