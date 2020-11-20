@@ -1,8 +1,8 @@
 {
   "name": "bloodbelt",
-  "version": "0.15.2",
-  "factorio_version": "0.16",
-  "dependencies": ["base >= 0.16"],
+  "version": "1.0.0",
+  "factorio_version": "1.0",
+  "dependencies": ["base >= 1.0"],
   "title": "Blood Belt",
   "author": "CengalLut",
   "contact": "cengallut@gmail.com",
